@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:each="dto,state: ${dtoList}">
+        <div>
+            <p th:text="${dto.sno}"></p>
+            <p th:text="${dto.title}"></p>
+            <p th:text="${#temporals.format(dto.regdate,'yyyy-MM-dd')}"></p>
+        </div>
+    </li>
+</ul>
+</body>
+</html>

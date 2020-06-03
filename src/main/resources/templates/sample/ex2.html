@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div th:object="${dto}">
+      <p th:text="*{sno}">SNO</p>
+      <p th:text="*{title}">TITLE</p>
+      <p th:text="*{writer}">WRITER</p>
+      <p th:text="*{regdate}">REGDATE</p>
+  </div>
+
+  <div >
+      <p th:text="${dto.sno}">SNO</p>
+      <p th:text="${dto.title}">TITLE</p>
+      <p th:text="${dto.writer}">WRITER</p>
+      <p th:text="${dto.regdate}">REGDATE</p>
+  </div>
+</body>
+</html>

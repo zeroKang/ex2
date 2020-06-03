@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:each="dto,state: ${dtoList}">
+        <div>
+            <p th:text="${state.index}"></p>
+            <p th:text="${state.index % 2 ==0}?'EVEN':'ODD'"></p>
+            <p th:text="${dto.sno}"></p>
+            <p th:text="'TITLE: ' +${dto.title}"></p>
+        </div>
+    </li>
+</ul>
+</body>
+</html>
